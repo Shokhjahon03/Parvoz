@@ -1,14 +1,16 @@
 import { Tooltip } from 'flowbite-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.jpg'
 
 const Navbar = () => {
   return (
-    <nav className='w-full h-[60px] opacity-80 bg-black fixed top-0 left-0'>
+    <nav className='w-full h-[60px]  fixed top-0 left-0'>
       <div className="container">
         <div className="navbar w-full flex items-center justify-between h-[60px]">
-           <div className='flex justify-around items-center'>
-              <i className='bx bxs-plane-alt text-white text-[30px]'></i>
+           <div className='flex justify-around items-center gap-2'>
+              {/* <i className='bx bxs-plane-alt text-white text-[30px]'></i> */}
+              <img src={logo} className='w-[40px] h-[40px] rounded-full' alt="alt" />
               <Link className='text-white'>Parvoz Company</Link>
            </div>
            <ul className='flex text-white w-[400px] items-center justify-between'>
@@ -43,13 +45,13 @@ const Navbar = () => {
               </div>
               </Tooltip>
            </ul>
-           <Tooltip content={<>
+           <Tooltip className='' content={<>
            <div className='flex h-[20px] gap-2 items-end'>
             <p>This is a beta version of the site</p>
             <i className='bx bxs-circle text-green-500' ></i>
            </div>
            </>}>
-           <button className='text-green-400 border pl-2 pr-2 rounded-md border-green-400'>
+           <button className='text-green-400 border pl-2 pr-2 rounded-md border-green-300'>
             beta
            </button>
            </Tooltip>
