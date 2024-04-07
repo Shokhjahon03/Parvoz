@@ -18,6 +18,10 @@ body,html{
   padding: 0 20px;
   margin: 0 auto;
 }
+nav{
+  background-color: rgba(0, 40, 189, 0.20);
+  z-index: 50;
+}
 .hero{
   background-image: url('https://www.akamai.com/site/en/images/hero-images/2023/hero-blue-green-wave.png?impolicy=mid-quality-image&imwidth=720%20720w');
   background-size: cover;
@@ -130,7 +134,7 @@ body,html{
 }
 .parallax {
   /* The image used */
-  background-image: url('https://media.licdn.com/dms/image/C4D12AQHqYs1tliOEnQ/article-cover_image-shrink_720_1280/0/1579376773402?e=2147483647&v=beta&t=fJoEAU-u7_nEDuyJiomscS7fuRTPZQ6dBGeUzFHyoQA');
+  background-image: url('https://www.forbes.com/advisor/wp-content/uploads/2022/03/build_a_website_for_free_-_article_image.jpg');
 
   /* Full height */
   height: 100%; 
@@ -142,7 +146,7 @@ body,html{
   background-size: cover;
 }
 .www{
-  background-image: url('https://cdn-employer-wp.arc.dev/wp-content/uploads/2022/04/software-development-costs-1128x635.jpg');
+  background-image: url('https://www.boardinfinity.com/blog/content/images/2023/05/Copy-of-Alpha-Testing-and-Beta-Testing.png');
 
   /* Full height */
   /* height: 100%;  */
@@ -160,4 +164,7 @@ body,html{
   .www {
     background-attachment: scroll;
   }
+}
+.work{
+  background-color: rgba(0, 40, 189, 0.14);
 }
