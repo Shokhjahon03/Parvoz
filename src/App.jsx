@@ -9,6 +9,9 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar/>
+    {/* <div className='heros w-full h-dvh fixed top-0 left-0 z-0'>
+
+    </div> */}
       <Routes>
           <Route path='/' element={<Homepage/>}/>
           <Route path='/order' element={<Order/>}/>

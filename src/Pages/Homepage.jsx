@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 const Homepage = () => {
   return (
     <>
-     <div className="hero w-full h-dvh">
+     <div className="hero relative w-full h-dvh">
          <div className="container h-full">
             <div className="headers h-full w-full flex justify-center items-center">
                   <div className='flex flex-col items-center gap-y-5'>
@@ -15,7 +15,7 @@ const Homepage = () => {
                         <span class="circle3"></span>
                         <span class="circle4"></span>
                         <span class="circle5"></span>
-                        <span class="text">Create With Us</span>
+                        <span class="text">Create With Us</span>L
                     </button> */}
                     <button className='btn'> 
                       <p>Create With Us</p>
@@ -25,6 +25,21 @@ const Homepage = () => {
             </div>
           </div>
       </div> 
+      <main className=' relative'>
+        <section className='www w-full h-dvh'>
+                    <div className="container">
+                      <div className='w-full'>
+
+                      </div>
+                    </div>
+        </section>
+        <section className='h-dvh'>
+        <div className='parallax h-full'>
+
+</div>
+        </section>
+      </main>
+      
     </>
   )
 }

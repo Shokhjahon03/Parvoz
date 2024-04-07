@@ -8,6 +8,10 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+body,html{
+  height: 100%;
+  width: 100%;
+}
 .container{
   max-width: 1240px;
   width: 100%;
@@ -123,4 +127,37 @@
 .btns:hover span:not(:nth-child(6)) {
   transform: translate(-50%, -50%) scale(4);
   transition: 1.5s ease;
+}
+.parallax {
+  /* The image used */
+  background-image: url('https://media.licdn.com/dms/image/C4D12AQHqYs1tliOEnQ/article-cover_image-shrink_720_1280/0/1579376773402?e=2147483647&v=beta&t=fJoEAU-u7_nEDuyJiomscS7fuRTPZQ6dBGeUzFHyoQA');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.www{
+  background-image: url('https://cdn-employer-wp.arc.dev/wp-content/uploads/2022/04/software-development-costs-1128x635.jpg');
+
+  /* Full height */
+  /* height: 100%;  */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+  .www {
+    background-attachment: scroll;
+  }
 }
