@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { ReactTyped } from "react-typed";
 const Homepage = () => {
   return (
     <>
@@ -20,6 +20,7 @@ const Homepage = () => {
                     <button className='btn'> 
                       <p>Create With Us</p>
                   </button>
+                  <ReactTyped className='text-white text-[30px]' strings={["Check out the full app to get to know us <i class='bx bx-down-arrow-alt text-red-500'></i>"]} typeSpeed={50} />
                   </div>
             </div>
           </div>
