@@ -15,11 +15,11 @@ const Navbar = () => {
            </div>
            <ul className='flex text-white w-[400px] items-center justify-between'>
               <div className='flex items-center gap-x-2'>
-              <Link className='hover:text-green-600'>Home</Link>
+              <Link className='hover:text-green-200'>Home</Link>
                 {/* <i className='bx bx-home-alt text-[20px]'></i> */}
               </div>
               <div className='flex items-center gap-x-2'>
-              <Link className='hover:text-green-600'>About Us</Link>
+              <Link className='hover:text-green-200'>About Us</Link>
               {/* <i className='bx bx-chevron-right text-[25px]'></i> */}
               </div>
               <Tooltip content={<>
@@ -40,7 +40,7 @@ const Navbar = () => {
               </div>
               </>}>
               <div className='flex items-center gap-x-2'>
-              <Link className='hover:text-green-600'>Placing An Order</Link>
+              <Link className='hover:text-green-200'>Placing An Order</Link>
               <i className='bx bx-chevron-right text-[25px]'></i>
               </div>
               </Tooltip>
