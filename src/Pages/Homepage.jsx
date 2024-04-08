@@ -122,8 +122,8 @@ const Homepage = () => {
                                           <p className='text-black'>Did you like our app?</p>
                                           <span className='w-full block border border-black'></span>
                                           <div className='mt-[10px] flex gap-x-2'>
-                                            <button className='flex items-center p-1 border w-[50px] justify-center rounded-lg border-black hover:bg-green-400'><p className='border-r border-r-black pr-1'>0</p><i className='pl-1 bx bxs-like' ></i></button>
-                                            <button className='flex items-center p-1 border w-[50px] justify-center rounded-lg border-black hover:bg-red-400'><p className='border-r border-r-black pr-1'>0</p><i className='bx bxs-dislike'></i></button>
+                                            <button className='flex items-center p-1 w-[50px] justify-center rounded-lg hover:bg-green-400'><i className='pl-1 bx bxs-like text-gray-600' ></i></button>
+                                            <button className='flex items-center p-1 w-[50px] justify-center rounded-lg hover:bg-red-400'><i className='bx bxs-dislike text-gray-600'></i></button>
                                           </div>
                                       </div>
                                       <div>
