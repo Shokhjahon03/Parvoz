@@ -2,8 +2,9 @@ import { Tooltip } from 'flowbite-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo2.jpg'
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+let navg=useNavigate()
   return (
     <nav className='w-full h-[60px]  fixed top-0 left-0 z-10'>
       <div className="container">
@@ -15,7 +16,7 @@ const Navbar = () => {
            </div>
            <ul className='flex text-white w-[400px] items-center justify-between'>
               <div className='flex items-center gap-x-2'>
-              <Link className='hover:text-green-200'>Home</Link>
+              <Link to={'/'} className='hover:text-green-200'>Home</Link>
                 {/* <i className='bx bx-home-alt text-[20px]'></i> */}
               </div>
               <div className='flex items-center gap-x-2'>
@@ -33,7 +34,7 @@ const Navbar = () => {
                 <p className='mb-[20px]'>
                   Agar javobingiz HA bo'lsa tugmani bosing !
                 </p>
-                <button className='btn'> 
+                <button onClick={()=>navg('/order')} className='btn'> 
                   click me
                   </button>
                 

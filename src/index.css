@@ -145,6 +145,19 @@ nav{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.parallax2 {
+  /* The image used */
+  background-image: url('https://www.akamai.com/site/en/images/hero-images/2023/hero-blue-green-wave.png?impolicy=mid-quality-image&imwidth=720%20720w');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .www{
   background-image: url('https://www.boardinfinity.com/blog/content/images/2023/05/Copy-of-Alpha-Testing-and-Beta-Testing.png');
 
@@ -274,4 +287,277 @@ img{
  button{
   transition: 0.3s;
  }
+/* input */
+ .label {
+  --border: rgba(66, 66, 66, 0.733);
+  --bgLabel: rgba(120,120,120,1);
+  --bgInput: rgba(255,255,255,1);
+  --color-light: black;
+  --color-light-a: rgb(133, 123, 150);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  background: var(--bgLabel);
+  position: relative;
+  font-size: .65rem;
+  transition: all .3s ease-out;
+}
 
+.label > .label-title {
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  box-shadow: 0 2px 2px rgba(120,120,120,.25);
+  padding: .25em .5em;
+  background-color: var(--bgInput);
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  position: relative;
+  border-radius: 4px;
+  translate: 10px -10px;
+  transition: all .5s ease-out .5s;
+  z-index: 10;
+}
+
+.label:focus .input,
+.label:focus-within .input {
+  background-color: var(--bgInput);
+  padding: 1em;
+  color: var(--color-light);
+  border: 2px solid var(--color-light);
+  outline: 2px solid var(--color-light);
+  outline-offset: -2px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(98, 0, 255, .25), 0 -5px 20px rgba(98, 0, 255,.1);
+  scale: 1.15;
+  transition: all .5s cubic-bezier(0,1.46,1,1.62) .3s;
+}
+
+.label:focus,
+.label:focus-within .label-title {
+  translate: 10px -20px;
+  border-radius: 4px 4px 0 0;
+  z-index: 0;
+  transition: all .3s cubic-bezier(0,1.46,1,1.62);
+}
+
+.input {
+  appearance: none;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid var(--color-light);
+  border-left: 2px solid transparent;
+  background-color: var(--bgInput);
+  caret-color: var(--color-light);
+  min-width: 200px;
+  padding: 1.25em 1em .25em;
+  outline: 0px solid var(--color-light);
+  grid-column: 1/-1;
+  grid-row: 1 / -1;
+  position: relative;
+  transition: all .3s cubic-bezier(.5,.6,.5,.62);
+  z-index: 0;
+}
+
+.input, 
+.input::placeholder {
+  color: var(--color-light-a);
+}
+
+/* btn */
+.continue-application {
+  --color: #fff;
+  --background: #404660;
+  --background-hover: #3A4059;
+  --background-left: #2B3044;
+  --folder: #F3E9CB;
+  --folder-inner: #BEB393;
+  --paper: #FFFFFF;
+  --paper-lines: #BBC1E1;
+  --paper-behind: #E1E6F9;
+  --pencil-cap: #fff;
+  --pencil-top: #275EFE;
+  --pencil-middle: #fff;
+  --pencil-bottom: #5C86FF;
+  --shadow: rgba(13, 15, 25, .2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 17px 29px 17px 69px;
+  transition: background 0.3s;
+  color: var(--color);
+  background: var(--bg, var(--background));
+}
+
+.continue-application > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  background: var(--background-left);
+}
+
+.continue-application > div .folder {
+  width: 23px;
+  height: 27px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.continue-application > div .folder .top {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder .top svg {
+  width: 24px;
+  height: 27px;
+  display: block;
+  fill: var(--folder);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease var(--fds, 0.45s);
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+
+.continue-application > div .folder:before, .continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  content: "";
+  position: absolute;
+  left: var(--l, 0);
+  top: var(--t, 0);
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  border-radius: 1px;
+  background: var(--b, var(--folder-inner));
+}
+
+.continue-application > div .folder:before {
+  box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  --l: 1px;
+  --t: 1px;
+  --w: 21px;
+  --h: 25px;
+  --b: var(--paper-behind);
+}
+
+.continue-application > div .folder:after {
+  transform: translate(var(--pbx, 0), var(--pby, 0));
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .folder .paper {
+  z-index: 1;
+  --b: var(--paper);
+}
+
+.continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+  content: "";
+  width: var(--wp, 14px);
+  height: 2px;
+  border-radius: 1px;
+  transform: scaleY(0.5);
+  left: 3px;
+  top: var(--tp, 3px);
+  position: absolute;
+  background: var(--paper-lines);
+  box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+
+.continue-application > div .folder .paper:after {
+  --tp: 6px;
+  --wp: 10px;
+}
+
+.continue-application > div .pencil {
+  height: 2px;
+  width: 3px;
+  border-radius: 1px 1px 0 0;
+  top: 8px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  background: var(--pencil-cap);
+  transform: translateX(var(--pex, 0)) rotate(35deg);
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+
+.continue-application > div .pencil:before, .continue-application > div .pencil:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+  width: var(--w, 5px);
+  height: var(--h, 20px);
+  border-radius: var(--br, 2px 2px 0 0);
+  top: var(--t, 2px);
+  left: var(--l, -1px);
+}
+
+.continue-application > div .pencil:before {
+  -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+  clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+
+.continue-application > div .pencil:after {
+  --b: none;
+  --w: 3px;
+  --h: 6px;
+  --br: 0 2px 1px 0;
+  --t: 3px;
+  --l: 3px;
+  border-top: 1px solid var(--pencil-top);
+  border-right: 1px solid var(--pencil-top);
+}
+
+.continue-application:before, .continue-application:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  top: 26px;
+  right: 16px;
+  transition: transform 0.3s;
+}
+
+.continue-application:after {
+  --r: 45deg;
+}
+
+.continue-application:hover {
+  --cx: 2px;
+  --bg: var(--background-hover);
+  --fx: -40px;
+  --fr: -60deg;
+  --fd: .15s;
+  --fds: 0s;
+  --pbx: 3px;
+  --pby: -3px;
+  --pbd: .15s;
+  --pex: -24px;
+}
+/* btn................................................ */

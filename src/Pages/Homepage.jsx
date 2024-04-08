@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import { ReactTyped } from "react-typed";
 import { Tooltip } from 'flowbite-react'
 import logo from '../assets/logo.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from "react";
 const Homepage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <>
      <div className="hero relative w-full h-dvh">
