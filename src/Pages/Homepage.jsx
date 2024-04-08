@@ -69,7 +69,7 @@ const Homepage = () => {
                             <div className='w-full flex flex-col flex-wrap justify-center gap-y-5'>
                               <p className='text-center text-white uppercase'>Bizning jamoa azolari</p>
                                 <div className='w-full flex flex-wrap justify-center gap-10'>
-                                  <div className='w-[300px] rounded-md flex flex-col gap-y-3'>
+                                  <div data-aos="fade-up" data-aos-duration='2000' className='w-[300px] rounded-md flex flex-col gap-y-3'>
                                   <img className=' rounded-md h-[200px]' src="https://res.cloudinary.com/practicaldev/image/fetch/s--mgVodcWf--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pp4ll13f5onw4gqj8ggl.jpg" alt="alt" />
                                   <p className='text-white'>Front-End Developers {"</>"}</p>
                                   <button className="learn-more">
@@ -79,7 +79,7 @@ const Homepage = () => {
                                     <span className="button-text">Learn More</span>
                                   </button>
                                   </div>
-                                  <div className='w-[300px] rounded-md flex flex-col gap-y-3'>
+                                  <div data-aos="fade-up" data-aos-duration='2000' className='w-[300px] rounded-md flex flex-col gap-y-3'>
                                   <img className=' rounded-md h-[200px]' src="https://t4.ftcdn.net/jpg/02/99/62/11/360_F_299621124_vutDKbNwRJG6poJRQQIMYfsc4tJCTO5E.jpg" alt="alt" />
                                   <p className='text-white'>Back-End Developers {"</>"}</p>
                                   <button className="learn-more">
@@ -89,7 +89,7 @@ const Homepage = () => {
                                     <span className="button-text">Learn More</span>
                                   </button>
                                   </div>
-                                  <div className='w-[300px] rounded-md flex flex-col gap-y-3'>
+                                  <div data-aos="fade-up" data-aos-duration='2000' className='w-[300px] rounded-md flex flex-col gap-y-3'>
                                   <img className=' rounded-md h-[200px]' src="https://blog.indepthresearch.org/wp-content/uploads/2023/10/Figma0.jpg" alt="alt" />
                                   <p className='text-white'>Designeres {"</>"}</p>
                                   <button className="learn-more">
