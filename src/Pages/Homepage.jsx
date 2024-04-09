@@ -105,40 +105,7 @@ const Homepage = () => {
                       </div>
                 </div>
         </section>
-                      <footer className='w-full h-[400px] bg-black text-white'>
-                            <div className="container h-full">
-                              <div className='w-full h-full flex justify-between p-5'>
-                                  <div className='text-white flex items-center'>
-                                    <img src={logo} className='w-[100px] h-[100px]' alt="alt" />
-                                    <p>Parvoz Company</p>
-                                  </div>
-                                  <div className='h-full flex flex-col justify-around'>
-                                    <div className='w-[200px] flex justify-around'>
-                                        <Link>Home</Link>
-                                        <Link>Aboute Us</Link>
-                                        {/* <Link>Home</Link> */}
-                                    </div>
-                                    <Link class="card p-4">
-                                      <p>Web Ilova buyurtma <br /> berish</p>
-                                      <i className='bx bxs-cog text-[45px] mt-[20px]' ></i>
-                                    </Link>
-                                  </div>
-                                  <div className='h-full flex flex-col justify-around'>
-                                      <div className=' rounded-lg bg-slate-100 w-[200px] p-3 text-black'>
-                                          <p className='text-black'>Did you like our app?</p>
-                                          <span className='w-full block border border-black'></span>
-                                          <div className='mt-[10px] flex gap-x-2'>
-                                            <button className='flex items-center p-1 w-[50px] justify-center rounded-lg hover:bg-green-400'><i className='pl-1 bx bxs-like text-gray-600' ></i></button>
-                                            <button className='flex items-center p-1 w-[50px] justify-center rounded-lg hover:bg-red-400'><i className='bx bxs-dislike text-gray-600'></i></button>
-                                          </div>
-                                      </div>
-                                      <div>
-
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                      </footer>
+                     
       </main>
       
     </>

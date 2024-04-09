@@ -2,6 +2,10 @@ import React from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from "react";
+import logo from '../assets/logo.jpg'
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
+
 const Order = () => {
   useEffect(() => {
     AOS.init();
@@ -91,7 +95,8 @@ const Order = () => {
               </div>
           </div>
       </div>
-      </div> 
+      </div>
+     {/* <Footer/> */}
     </>
   )
 }
