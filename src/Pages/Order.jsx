@@ -19,7 +19,7 @@ const Order = () => {
               data-aos="fade-right" 
               data-aos-duration="1500">
                    <p>1-qadam</p>
-                  <div className='w-full flex justify-between'>
+                  <div className='w-full flex flex-col gap-y-[30px] justify-between'>
                     <div className='flex flex-col items-start gap-y-7'>
                     <p>Qanday web ilova yaratmoqchisiz <i className='bx bxs-pencil'></i></p>
                     <select className=' rounded-md border-inherit text-gray-700' name="" id="">
@@ -43,7 +43,7 @@ const Order = () => {
                       {/* <option value="">Web ilova turini tanlang</option> */}
                       <option value="biznes">Biznes</option>
                       <option value="shop">Onlayn do'kon</option>
-                      <option value="admin">Mavjud ilova uchun boshqaruv paneli</option>
+                      {/* <option value="admin">Mavjud ilova uchun boshqaruv paneli</option> */}
                       <option value="sport">Sport</option>
                       <option value="tibbiyot">Tibbiyot</option>
                       <option value="talim">Ta'lim</option>
@@ -56,11 +56,11 @@ const Order = () => {
               data-aos="fade-left" 
               data-aos-duration="2000">
                 <p>2-qadam</p>
-               <div className='w-full flex justify-between'>
+               <div className='w-full flex flex-col gap-y-[30px] justify-between'>
                <div className='flex flex-col items-start gap-y-7'>
                     <p>Web ilovangiz holatini tanlang <i className='bx bxs-pencil'></i></p>
                     <select className=' rounded-md border-inherit text-gray-700' name="" id="">
-                      <option value="staik">Qidiruv tizimi uchun yaxshi</option>
+                      <option value="staik">Qidiruv tizimi uchun </option>
                       <option value="dinamik">Tez ishlashi keraik</option>
                     </select>
                     </div>
@@ -96,7 +96,6 @@ const Order = () => {
           </div>
       </div>
       </div>
-     {/* <Footer/> */}
     </>
   )
 }
