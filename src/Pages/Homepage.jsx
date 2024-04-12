@@ -64,34 +64,16 @@ const Homepage = () => {
                                   <div data-aos="fade-up" data-aos-duration='2000' className='w-[300px] rounded-md flex flex-col gap-y-2 lg:gap-y-3'>
                                   <img className=' rounded-md h-[100px] lg:h-[200px]' src="https://res.cloudinary.com/practicaldev/image/fetch/s--mgVodcWf--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pp4ll13f5onw4gqj8ggl.jpg" alt="alt" />
                                   <p className='text-white'>Front-End Developers {"</>"}</p>
-                                  {/* <button className="learn-more">
-                                    <span className="circle" aria-hidden="true">
-                                    <span className="icon arrow"></span>
-                                    </span>
-                                    <span className="button-text">Learn More</span>
-                                  </button> */}
                                   <Link className='text-white'>Ular haqida <i className='bx bxs-hand-right'></i></Link>
                                   </div>
                                   <div data-aos="fade-up" data-aos-duration='2000' className='w-[300px] rounded-md flex flex-col gap-y-2 lg:gap-y-3'>
                                   <img className=' rounded-md h-[100px] lg:h-[200px]' src="https://t4.ftcdn.net/jpg/02/99/62/11/360_F_299621124_vutDKbNwRJG6poJRQQIMYfsc4tJCTO5E.jpg" alt="alt" />
                                   <p className='text-white'>Back-End Developers {"</>"}</p>
-                                  {/* <button className="learn-more">
-                                    <span className="circle" aria-hidden="true">
-                                    <span className="icon arrow"></span>
-                                    </span>
-                                    <span className="button-text">Learn More</span>
-                                  </button> */}
                                   <Link className='text-white'>Ular haqida <i className='bx bxs-hand-right'></i></Link>
                                   </div>
                                   <div data-aos="fade-up" data-aos-duration='2000' className='w-[300px] rounded-md flex flex-col gap-y-2 lg:gap-y-3'>
                                   <img className=' rounded-md h-[100px] lg:h-[200px]' src="https://blog.indepthresearch.org/wp-content/uploads/2023/10/Figma0.jpg" alt="alt" />
                                   <p className='text-white'>Designeres {"</>"}</p>
-                                  {/* <button className="learn-more">
-                                    <span className="circle" aria-hidden="true">
-                                    <span className="icon arrow"></span>
-                                    </span>
-                                    <span className="button-text">Learn More</span>
-                                  </button> */}
                                   <Link className='text-white'>Ular haqida <i className='bx bxs-hand-right'></i></Link>
                                   </div>
                                 </div>

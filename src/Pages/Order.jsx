@@ -19,7 +19,7 @@ const Order = () => {
               data-aos="fade-right" 
               data-aos-duration="1500">
                    <p>1-qadam</p>
-                  <div className='w-full flex flex-col gap-y-[30px] justify-between'>
+                  <div className='w-full flex flex-col gap-y-[30px] justify-between md:flex-row'>
                     <div className='flex flex-col items-start gap-y-7'>
                     <p>Qanday web ilova yaratmoqchisiz <i className='bx bxs-pencil'></i></p>
                     <select className=' rounded-md border-inherit text-gray-700' name="" id="">
@@ -56,7 +56,7 @@ const Order = () => {
               data-aos="fade-left" 
               data-aos-duration="2000">
                 <p>2-qadam</p>
-               <div className='w-full flex flex-col gap-y-[30px] justify-between'>
+               <div className='w-full flex flex-col gap-y-[30px] justify-between md:flex-row'>
                <div className='flex flex-col items-start gap-y-7'>
                     <p>Web ilovangiz holatini tanlang <i className='bx bxs-pencil'></i></p>
                     <select className=' rounded-md border-inherit text-gray-700' name="" id="">
