@@ -38,10 +38,10 @@ const Homepage = () => {
                                     <p>-Agarda biz haqimizda to'liqroq ma'lumotga <br /> ega bo'lishni istasangiz biz bilan bog'laning</p>
                                     <div className='w-full flex gap-9'>
                                       <Tooltip content="Telegram orqali bog'lanish">
-                                        <Link><i className='bx bxl-telegram hover:underline text-[20px]'></i></Link>
+                                        <Link to={'https://t.me/developer_shohjahon_003'}><i className='bx bxl-telegram hover:underline text-[20px]'></i></Link>
                                       </Tooltip>
                                       <Tooltip content="Qo'ng'iroq qilish">
-                                        <Link><i className='bx bx-phone hover:underline text-[20px]' ></i></Link>
+                                        <Link to={'tel:+998949876525'}><i className='bx bx-phone hover:underline text-[20px]' ></i></Link>
                                       </Tooltip>
                                       <Tooltip content="Linkedin orqali bog'lanish">
                                         <Link><i className='bx bxl-linkedin hover:underline text-[20px]' ></i></Link>

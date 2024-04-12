@@ -73,7 +73,7 @@ let navg=useNavigate()
                   <div className='flex gap-[15px]'>
                   <Link to={'https://t.me/developer_shohjahon_003'}><i className='bx bxl-telegram'></i></Link>
                   <Link to={'/'}><i className='bx bxl-linkedin-square'></i></Link>
-                  <Tooltip content={<><a href="tel:998949876525">+998949876525</a></>}>
+                  <Tooltip content={<><a href="tel:+998949876525">+998949876525</a></>}>
                   <Link><i className='bx bx-phone'></i></Link>
                   </Tooltip>
                   <Link><i className='bx bxs-envelope'></i></Link>
