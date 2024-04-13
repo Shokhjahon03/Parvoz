@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from "react";
 import logo from '../assets/logo.jpg'
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import axios from 'axios';
 
 const Order = () => {
+  let [val,setVal]=useState({IlovaType:'',IlovaName:'',IlovaYonalishi:'',IlovaKuchi:'',time:0})
+  let func=(e)=>{
+    
+      if (val.IlovaKuchi!=='' && val.IlovaName!=='' && val.IlovaType!=='' && val.IlovaYonalishi!=='' && val.time!=='') {
+        axios.post('https://65fa8d763909a9a65b1aac72.mockapi.io/port',val)
+      console.log(val);
+      }
+    
+  }
   useEffect(() => {
     AOS.init();
   }, [])
@@ -14,16 +24,16 @@ const Order = () => {
     <>
      <div className='parallax2 w-full pt-[100px] text-white'>
       <div className="container">
-          <div className='w-full flex flex-col justify-between p-10 gap-y-[100px]'>
-              <div className='flex flex-col items-start gap-y-7 w-full p-7 rounded-md border-4 text-white'  
+          <form onSubmit={(e)=> e.preventDefault()} className='w-full flex flex-col justify-between p-10 gap-y-[100px]'>
+              <div className='flex flex-col items-start gap-y-7 w-full p-7 rounded-md  text-white'  
               data-aos="fade-right" 
               data-aos-duration="1500">
                    <p>1-qadam</p>
                   <div className='w-full flex flex-col gap-y-[30px] justify-between md:flex-row'>
                     <div className='flex flex-col items-start gap-y-7'>
                     <p>Qanday web ilova yaratmoqchisiz <i className='bx bxs-pencil'></i></p>
-                    <select className=' rounded-md border-inherit text-gray-700' name="" id="">
-                      {/* <option value="">Web ilova turini tanlang</option> */}
+                    <select required onChange={(e)=>setVal({IlovaType:e.target.value,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
+                      <option value="">Tanlang</option>
                       <option value="staik">Statik</option>
                       <option value="dinamik">Dinamik</option>
                     </select>
@@ -33,14 +43,15 @@ const Order = () => {
                         <p>Web ilovangiz nomi <i className='bx bxs-pencil'></i></p>
                         <label for="myInput" className="label rounded-md">
                       <span className="label-title">web ilova nomi</span>
-                      <input id="myInput" className="input rounded-md" name="text" placeholder="Type..." type="text"/>
+                      {/* <input onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:e.target.value,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} id="myInput" className="input rounded-md" name="text" placeholder="Type..." type="text"/> */}
+                      <input onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:e.target.value,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} type="text" placeholder='Name' required className='text-gray-800 rounded-lg outline-none' />
                     </label>
                   </div>
 
                   <div className='flex flex-col items-start gap-y-7'>
                   <p>Web ilovangiz qanday yo'nalishda <i className='bx bxs-pencil'></i></p>
-                  <select className=' rounded-md border-inherit text-gray-700' name="" id="">
-                      {/* <option value="">Web ilova turini tanlang</option> */}
+                  <select onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:e.target.value,IlovaKuchi:val.IlovaKuchi,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
+                      <option value="">Tanlang</option>
                       <option value="biznes">Biznes</option>
                       <option value="shop">Onlayn do'kon</option>
                       {/* <option value="admin">Mavjud ilova uchun boshqaruv paneli</option> */}
@@ -52,14 +63,15 @@ const Order = () => {
 
                   </div>
               </div>
-              <div className='flex flex-col items-start gap-y-7 w-full p-7 rounded-md border-4'  
+              <div className='flex flex-col items-start gap-y-7 w-full p-7 rounded-md'  
               data-aos="fade-left" 
               data-aos-duration="2000">
                 <p>2-qadam</p>
                <div className='w-full flex flex-col gap-y-[30px] justify-between md:flex-row'>
                <div className='flex flex-col items-start gap-y-7'>
                     <p>Web ilovangiz holatini tanlang <i className='bx bxs-pencil'></i></p>
-                    <select className=' rounded-md border-inherit text-gray-700' name="" id="">
+                    <select onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:e.target.value,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
+                      <option value="">Tanlang</option>
                       <option value="staik">Qidiruv tizimi uchun </option>
                       <option value="dinamik">Tez ishlashi keraik</option>
                     </select>
@@ -67,15 +79,12 @@ const Order = () => {
 
                     <div className='flex flex-col items-start gap-y-7'>
                         <p>Web ilovangiz qancha vaqtda tayyor bo'lishi kerak <i className='bx bxs-pencil'></i></p>
-                        <label for="myInput" className="label rounded-md">
-                      <span className="label-title text-red-600">minimal 10 kun !</span>
-                      <input id="myInput" className="input rounded-md" name="text" placeholder="Vaqt chegarasi..." type="text"/>
-                    </label>
+                   <input onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:e.target.value})} type="number" placeholder='Time' required className='text-gray-800 rounded-lg outline-none' />
                   </div>
 
                   <div>
                     <p className='mb-[25px]'>Buyurtmani tasdiqlash <i className='bx bx-check' ></i></p>
-                    <button className="continue-application">
+                    <button onClick={()=>func()} className="continue-application">
                       <div>
                           <div className="pencil"></div>
                           <div className="folder">
@@ -93,7 +102,7 @@ const Order = () => {
 
                </div>
               </div>
-          </div>
+          </form>
       </div>
       </div>
     </>

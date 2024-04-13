@@ -18,9 +18,9 @@ const Homepage = () => {
                   <div className='flex flex-col items-center gap-y-5'>
                     <h1 className='text-white lg:text-[80px] text-center text-[50px]'>Parvoz Company</h1>
                     <p className='text-white text-center'>This company can create simple and complex web applications for you</p>
-                    <button className='btn'> 
+                    <Link to={'/order'}><button className='btn'> 
                       <p>Create With Us</p>
-                  </button>
+                  </button></Link>
                   <ReactTyped className='text-white lg:text-[30px]' strings={["Check out the full app to get to know us <i class='bx bx-down-arrow-alt text-blue-400'></i>"]} typeSpeed={50} />
                   </div>
             </div>

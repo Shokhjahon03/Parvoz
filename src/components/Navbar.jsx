@@ -16,7 +16,7 @@ let navg=useNavigate()
            <div className='flex justify-around items-center gap-2'>
               {/* <i className='bx bxs-plane-alt text-white text-[30px]'></i> */}
               <img src={logo} className='w-[40px] h-[40px] rounded-full' alt="alt" />
-              <Link className='text-white'>Parvoz Company</Link>
+              <Link to={'/'} className='text-white'>Parvoz Company</Link>
            </div>
            <ul className='hidden md:flex text-white w-[400px] items-center justify-between'>
               <div className='flex items-center gap-x-2'>
@@ -24,13 +24,13 @@ let navg=useNavigate()
                 {/* <i className='bx bx-home-alt text-[20px]'></i> */}
               </div>
               <div className='flex items-center gap-x-2'>
-              <Link className='hover:text-green-200'>About Us</Link>
+              <Link to={'/aboute'} className='hover:text-green-200'>About Us</Link>
               {/* <i className='bx bx-chevron-right text-[25px]'></i> */}
               </div>
               <Tooltip content={<>
               <div>
                 <p className='mb-[20px]'>
-                Siz bu yerga o'z sytingizni buyurtma berishingiz mumkin
+                Siz bu yerga o'z saytingizni buyurtma berishingiz mumkin
                 </p>
                 <p className='mb-[20px]'>
                   Tayyormisiz ? 
@@ -62,11 +62,11 @@ let navg=useNavigate()
            </Tooltip>
         </div>
       </div>
-      <div className={openSaidBar? 'md:hidden flex flex-col items-center pb-3 gap-[200px] text-white absolute top-[60px] left-0 bg-black w-full':'hidden'}>
+      <div className={openSaidBar? 'md:hidden flex z-50 flex-col items-center pb-3 gap-[200px] text-white absolute top-[60px] left-0 bg-black w-full':'hidden'}>
             <div className='flex w-full flex-col items-center mt-[25px]'>
             <ul className='flex flex-col items-center mb-[25px]'>  
-                <Link>Home</Link>
-                <Link>Aboute Us</Link>
+                <Link to={'/'}>Home</Link>
+                <Link to={'/aboute'}>Aboute Us</Link>
             </ul>
               <div className='flex flex-col items-center'>
                   <p className='mb-[15px]'>Contact</p>
@@ -80,7 +80,7 @@ let navg=useNavigate()
                   </div>
               </div>
             </div>
-            <Link className='flex items-center gap-1'>
+            <Link to='/order' className='flex items-center gap-1'>
             <i className='bx bx-cog'></i>
             <span className='block h-[30px] border w-0'></span>
               <p>Create Web Site</p>
