@@ -24,7 +24,7 @@ let navg=useNavigate()
                 {/* <i className='bx bx-home-alt text-[20px]'></i> */}
               </div>
               <div className='flex items-center gap-x-2'>
-              <Link to={'/aboute'} className='hover:text-green-200'>About Us</Link>
+              <Link to={'/'} className='hover:text-green-200'>About Us</Link>
               {/* <i className='bx bx-chevron-right text-[25px]'></i> */}
               </div>
               <Tooltip content={<>
@@ -65,22 +65,22 @@ let navg=useNavigate()
       <div className={openSaidBar? 'md:hidden flex z-50 flex-col items-center pb-3 gap-[200px] text-white absolute top-[60px] left-0 bg-black w-full':'hidden'}>
             <div className='flex w-full flex-col items-center mt-[25px]'>
             <ul className='flex flex-col items-center mb-[25px]'>  
-                <Link to={'/'}>Home</Link>
-                <Link to={'/aboute'}>Aboute Us</Link>
+                <Link onClick={()=>setOpenSaidBar(!openSaidBar)} to={'/'}>Home</Link>
+                <Link onClick={()=>setOpenSaidBar(!openSaidBar)} to={'/'}>Aboute Us</Link>
             </ul>
               <div className='flex flex-col items-center'>
                   <p className='mb-[15px]'>Contact</p>
                   <div className='flex gap-[15px]'>
-                  <Link to={'https://t.me/developer_shohjahon_003'}><i className='bx bxl-telegram'></i></Link>
-                  <Link to={'/'}><i className='bx bxl-linkedin-square'></i></Link>
+                  <Link onClick={()=>setOpenSaidBar(!openSaidBar)} to={'https://t.me/developer_shohjahon_003'}><i className='bx bxl-telegram'></i></Link>
+                  <Link onClick={()=>setOpenSaidBar(!openSaidBar)} to={'/'}><i className='bx bxl-linkedin-square'></i></Link>
                   <Tooltip content={<><a href="tel:+998949876525">+998949876525</a></>}>
-                  <Link><i className='bx bx-phone'></i></Link>
+                  <Link onClick={()=>setOpenSaidBar(!openSaidBar)}><i className='bx bx-phone'></i></Link>
                   </Tooltip>
-                  <Link><i className='bx bxs-envelope'></i></Link>
+                  <Link onClick={()=>setOpenSaidBar(!openSaidBar)}><i className='bx bxs-envelope'></i></Link>
                   </div>
               </div>
             </div>
-            <Link to='/order' className='flex items-center gap-1'>
+            <Link onClick={()=>setOpenSaidBar(!openSaidBar)} to='/order' className='flex items-center gap-1'>
             <i className='bx bx-cog'></i>
             <span className='block h-[30px] border w-0'></span>
               <p>Create Web Site</p>
