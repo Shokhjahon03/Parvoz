@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from "react";
-import logo from '../assets/logo.jpg'
-import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
 import axios from 'axios';
+import { Toast } from "flowbite-react";
 
 const Order = () => {
   let [val,setVal]=useState({IlovaType:'',IlovaName:'',IlovaYonalishi:'',IlovaKuchi:'',time:0})
+  let [openToast,setOpenToast]=useState(false)
   let func=(e)=>{
     
       if (val.IlovaKuchi!=='' && val.IlovaName!=='' && val.IlovaType!=='' && val.IlovaYonalishi!=='' && val.time!=='') {
         axios.post('https://65fa8d763909a9a65b1aac72.mockapi.io/port',val)
-      console.log(val);
+      // console.log(val);
+      setVal({IlovaType:'',IlovaName:'',IlovaYonalishi:'',IlovaKuchi:'',time:0})
+      setOpenToast(true)
       }
     
   }
@@ -32,7 +33,7 @@ const Order = () => {
                   <div className='w-full flex flex-col gap-y-[30px] justify-between md:flex-row'>
                     <div className='flex flex-col items-start gap-y-7'>
                     <p>Qanday web ilova yaratmoqchisiz <i className='bx bxs-pencil'></i></p>
-                    <select required onChange={(e)=>setVal({IlovaType:e.target.value,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
+                    <select value={val.IlovaType} required onChange={(e)=>setVal({IlovaType:e.target.value,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
                       <option value="">Tanlang</option>
                       <option value="staik">Statik</option>
                       <option value="dinamik">Dinamik</option>
@@ -44,13 +45,13 @@ const Order = () => {
                         <label for="myInput" className="label rounded-md">
                       <span className="label-title">web ilova nomi</span>
                       {/* <input onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:e.target.value,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} id="myInput" className="input rounded-md" name="text" placeholder="Type..." type="text"/> */}
-                      <input onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:e.target.value,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} type="text" placeholder='Name' required className='text-gray-800 rounded-lg outline-none' />
+                      <input value={val.IlovaName} onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:e.target.value,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:val.time})} type="text" placeholder='Name' required className='text-gray-800 rounded-lg outline-none' />
                     </label>
                   </div>
 
                   <div className='flex flex-col items-start gap-y-7'>
                   <p>Web ilovangiz qanday yo'nalishda <i className='bx bxs-pencil'></i></p>
-                  <select onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:e.target.value,IlovaKuchi:val.IlovaKuchi,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
+                  <select value={val.IlovaYonalishi} onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:e.target.value,IlovaKuchi:val.IlovaKuchi,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
                       <option value="">Tanlang</option>
                       <option value="biznes">Biznes</option>
                       <option value="shop">Onlayn do'kon</option>
@@ -70,7 +71,7 @@ const Order = () => {
                <div className='w-full flex flex-col gap-y-[30px] justify-between md:flex-row'>
                <div className='flex flex-col items-start gap-y-7'>
                     <p>Web ilovangiz holatini tanlang <i className='bx bxs-pencil'></i></p>
-                    <select onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:e.target.value,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
+                    <select value={val.IlovaKuchi} onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:e.target.value,time:val.time})} className=' rounded-md border-inherit text-gray-700' name="" id="">
                       <option value="">Tanlang</option>
                       <option value="staik">Qidiruv tizimi uchun </option>
                       <option value="dinamik">Tez ishlashi keraik</option>
@@ -79,7 +80,7 @@ const Order = () => {
 
                     <div className='flex flex-col items-start gap-y-7'>
                         <p>Web ilovangiz qancha vaqtda tayyor bo'lishi kerak <i className='bx bxs-pencil'></i></p>
-                   <input onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:e.target.value})} type="number" placeholder='Time' required className='text-gray-800 rounded-lg outline-none' />
+                   <input value={val.time} onChange={(e)=>setVal({IlovaType:val.IlovaType,IlovaName:val.IlovaName,IlovaYonalishi:val.IlovaYonalishi,IlovaKuchi:val.IlovaKuchi,time:e.target.value})} type="number" placeholder='Time' required className='text-gray-800 rounded-lg outline-none' />
                   </div>
 
                   <div>
@@ -105,6 +106,13 @@ const Order = () => {
           </form>
       </div>
       </div>
+      <Toast className={openToast? 'fixed top-[100px] right-0':'hidden'}>
+      <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-500 dark:bg-cyan-800 dark:text-cyan-200">
+      <i className='bx bx-check-double'></i>
+      </div>
+      <div className="ml-3 text-sm font-normal">Ajoyib so'rovingiz qabul qilindi</div>
+      <Toast.Toggle />
+    </Toast>
     </>
   )
 }
