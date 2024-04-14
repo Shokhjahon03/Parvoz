@@ -23,7 +23,7 @@ const Order = () => {
   }, [])
   return (
     <>
-     <div className='parallax2 w-full pt-[100px] text-white'>
+     <div id='ss' className='parallax2 w-full pt-[100px] text-white'>
       <div className="container">
           <form onSubmit={(e)=> e.preventDefault()} className='w-full flex flex-col justify-between p-10 gap-y-[100px]'>
               <div className='flex flex-col items-start gap-y-7 w-full p-7 rounded-md  text-white'  

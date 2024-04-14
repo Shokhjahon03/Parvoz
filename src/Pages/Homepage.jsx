@@ -12,6 +12,20 @@ const Homepage = () => {
   }, [])
   return (
     <>
+    {/* <div className="container h-full">
+                            <div className='w-full h-full flex flex-col gap-5'>
+                                <div className='flex items-center relative'>
+                                  <img src={logo} className='w-[40px] relative' alt="alt" />
+                                  <div className='bg-teal-500 w-[20px] top-0 absolute  h-[20px] rounded-full flex items-center justify-center'><p className='text-center text-[10px]'>PC</p></div>
+                                </div>
+                                <div className='flex flex-col'>
+                                  <Link>Home</Link>
+                                  <Link>Aboute US</Link>
+                                  <Link>Create Site</Link>
+                                  <Link>Aboute App</Link>
+                                </div>
+                            </div>
+                           </div> */}
      <div className="hero relative w-full h-dvh">
          <div className="container h-full">
             <div className="headers h-full w-full flex justify-center items-center">
